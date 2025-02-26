@@ -7,16 +7,13 @@ function generateUniqueID(firstName, lastName) {
 }
 
 function isStringNull(str) {
-    return str === null ? true : false
+    return str === null
 }
 
 function addAccount(accInfo) {
     if (!Array.isArray(accInfo) || accInfo.length != 4) return false;
 
-    let firstName = accInfo[0], 
-        lastName = accInfo[1], 
-        email = accInfo[2],
-        age = accInfo[3]
+    let [firstName, lastName, email, age] = accInfo
 
     if (isStringNull(firstName) || 
         isStringNull(lastName) || 
@@ -37,3 +34,5 @@ function addAccount(accInfo) {
         return false
     }
 }
+
+export default {generateUniqueID, addAccount}
