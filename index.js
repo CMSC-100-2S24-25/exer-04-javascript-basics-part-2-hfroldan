@@ -7,7 +7,7 @@ function generateUniqueID(firstName, lastName) {
 }
 
 function isStringNull(str) {
-    return str === null
+    return str === null || str === ''
 }
 
 function addAccount(accInfo) {
